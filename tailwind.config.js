@@ -1,12 +1,16 @@
 module.exports = {
-    content: ["./src/**/*.{html,js}"],
-    theme: {
-      extend: {
-        fontFamily: {
-            adlam: ['"ADLaM Display"', 'serif'],
-          },
+  theme: {
+    extend: {
+      animation: {
+        marquee: "marquee 10s linear infinite",
       },
-
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+};
